@@ -10,7 +10,7 @@ from gtts import gTTS
 
 print("Imports Completed")
 
-url = "https://cdn.discordapp.com/attachments/915276863272800297/1096812788195799070/wes-hmef00277.png"
+url = "https://cdn.discordapp.com/attachments/915276863272800297/1096883706213437510/Screen_Shot_2023-04-15_at_3.44.09_PM.png"
 model = "nlpconnect/vit-gpt2-image-captioning"
 LANGUAGES = ['en', 'es', 'fr', 'zh-CN']
 ACCENTS = [['com.au', 'co.uk', 'us'], ['com.mx', 'es'], ['fr']]
@@ -37,7 +37,7 @@ def image_to_file(image_url, language, accent):
     return filename
 
 
-image_to_file(url, LANGUAGES[3], ACCENTS[1][0])
+image_to_file(url, LANGUAGES[0], ACCENTS[0][2])
 
 '''
 Steps:
