@@ -1,0 +1,4 @@
+transformers
+gtts
+torch
+pillow
