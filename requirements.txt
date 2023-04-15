@@ -2,3 +2,6 @@ transformers
 gtts
 torch
 pillow
+matplotlib
+cv2
+tesseract

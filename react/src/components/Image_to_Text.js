@@ -2,17 +2,27 @@ import React from 'react';
 import '../App.css';
 import Header from './Header.js';
 import axios from 'axios';
+import RenderAudio from './renderaudio.js';
+import { Input } from '@mui/material';
+import { Button } from '@mui/material';
 
 class Image_to_Text extends React.Component {
 
     state = {
-        selectedFile: null
+        selectedFile: null,
+        renderaudio: false,
     }
 
     fileSelectedHandler = (event) => {
         this.setState({
-            selectedFile: event.target.files[0]
+            selectedFile: event.target.files[0],
+            renderaudio: false,
+            url: '',
+            hidden: true
         })
+        this.setState({
+            url: URL.createObjectURL(event.target.files[0])
+          })
 
     }
 
@@ -31,6 +41,9 @@ class Image_to_Text extends React.Component {
         }).then((res)=>{
             console.log(res)
         })
+        this.setState({
+            renderaudio: true
+          })
     }
 
     render () {
@@ -41,9 +54,19 @@ class Image_to_Text extends React.Component {
             <p></p>
             <p>Here you can upload an image of your choice, and an audio file describing that image will be returned</p>
             <form>
-                <input type="file" onChange={this.fileSelectedHandler} />
-                <button type="button" onClick={this.fileUploadHandler}>Upload</button>
-            </form>
+                <Button
+                    variant="contained"
+                    component="label"
+                    >
+                    Select File
+                    <input hidden type="file" onChange={this.fileSelectedHandler} />
+                </Button>
+                <Button type="button" onClick={this.fileUploadHandler}>Upload</Button>
+                </form>
+                <img height="300" src={this.state.url}/>
+                <h1></h1>
+                <RenderAudio renderaudio={this.state.renderaudio} />
+                
         </>
     )
     }

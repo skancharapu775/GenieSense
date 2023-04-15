@@ -36,8 +36,10 @@ def image_to_file(image_url, language, accent):
     print("Speech Generated!")
     return filename
 
+text = "A white dog runs on a playground"
 
-image_to_file(url, LANGUAGES[0], ACCENTS[0][2])
+text_to_file(text, LANGUAGES[0], ACCENTS[0][2])
+# image_to_file(url, LANGUAGES[0], ACCENTS[0][2])
 
 '''
 Steps:
