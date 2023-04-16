@@ -1,5 +1,5 @@
 # GenieSense
-Image to Speech Technology for the Visually-Impaired and Blind
+Image to Speech Technology for the Visually-Impaired and the Blind
 
 Creators: Sid Kancharapu, Alexander Popescu
 
